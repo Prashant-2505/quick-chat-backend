@@ -14,7 +14,7 @@ app.use(cors({
 
 const server = http.createServer(app);
 const io = new Server(server, {
-    cors: { origin: "https://quick-chat-client-eight.vercel.app/", methods: ["GET", "POST"] },
+    cors: { origin: "https://quick-chat-client-eight.vercel.app", methods: ["GET", "POST"] },
 });
 
 server.listen(4000, () => { console.log("listening on *:4000"); });
