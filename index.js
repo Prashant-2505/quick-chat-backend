@@ -5,6 +5,13 @@ const { Server } = require("socket.io");
 const cors = require('cors');
 app.use(cors());
 
+
+
+app.use(cors({
+    origin: "https://quick-chat-client-eight.vercel.app", // Ensure this matches the frontend origin
+    methods: ["GET", "POST"]
+}));
+
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: { origin: "https://quick-chat-client-eight.vercel.app/", methods: ["GET", "POST"] },
